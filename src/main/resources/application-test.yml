@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cvgenerator
+    username: postgres
+    password: postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+
+
+aws:
+  access:
+    s3:
+  secret:
+    s3:
+  s3:
+    bucket: "s3-cv-bucket"
+    endpoint: "https://s3-cv-bucket.s3.eu-central-1.amazonaws.com"
+  region: "eu-central-1"
